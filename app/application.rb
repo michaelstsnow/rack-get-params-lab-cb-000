@@ -25,7 +25,7 @@ class Application
     elsif req.path.match(/add/)
       add_term = req.params["item"]
       search_resp=self.handle_search(add_term)
-      if search_resp ==
+      if search_resp.contains?("is one of our items")
       else
       end
     else
