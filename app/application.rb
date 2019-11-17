@@ -27,7 +27,7 @@ class Application
       search_resp=self.handle_search(add_term)
       if search_resp.include?("is one of our items")
         @@cart << add_term
-        resp.write "Added #{add_term}"
+        resp.write "added #{add_term}"
       else
         resp.write "We don't have that item"
       end
