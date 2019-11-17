@@ -24,7 +24,10 @@ class Application
       end
     elsif req.path.match(/add/)
       add_term = req.params["item"]
-      self.handle_search(add_term)
+      search_resp=self.handle_search(add_term)
+      if search_resp ==
+      else
+      end
     else
       resp.write "Path Not Found"
     end
